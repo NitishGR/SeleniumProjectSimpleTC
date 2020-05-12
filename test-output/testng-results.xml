@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="24168" started-at="2020-05-10T15:21:01Z" finished-at="2020-05-10T15:21:26Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="24168" started-at="2020-05-10T15:21:01Z" finished-at="2020-05-10T15:21:26Z">
+      <class name="com.training.sanity.tests.UFM_011_Test">
+        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.UFM_011_Test@b6a1c6cc]" name="setUpBeforeClass" is-config="true" duration-ms="15344" started-at="2020-05-10T15:21:01Z" finished-at="2020-05-10T15:21:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpBeforeClass -->
+        <test-method status="PASS" signature="UFM_011_Login()[pri:0, instance:com.training.sanity.tests.UFM_011_Test@b6a1c6cc]" name="UFM_011_Login" duration-ms="2988" started-at="2020-05-10T15:21:17Z" finished-at="2020-05-10T15:21:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UFM_011_Login -->
+        <test-method status="PASS" signature="UFM_011_CatalogMenu()[pri:0, instance:com.training.sanity.tests.UFM_011_Test@b6a1c6cc]" name="UFM_011_CatalogMenu" duration-ms="2579" started-at="2020-05-10T15:21:20Z" depends-on-methods="com.training.sanity.tests.UFM_011_Test.UFM_011_Login" finished-at="2020-05-10T15:21:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UFM_011_CatalogMenu -->
+        <test-method status="PASS" signature="UFM_011_CategoriesList()[pri:0, instance:com.training.sanity.tests.UFM_011_Test@b6a1c6cc]" name="UFM_011_CategoriesList" duration-ms="991" started-at="2020-05-10T15:21:22Z" depends-on-methods="com.training.sanity.tests.UFM_011_Test.UFM_011_CatalogMenu" finished-at="2020-05-10T15:21:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UFM_011_CategoriesList -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.UFM_011_Test@b6a1c6cc]" name="tearDown" is-config="true" duration-ms="2205" started-at="2020-05-10T15:21:23Z" finished-at="2020-05-10T15:21:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.training.sanity.tests.UFM_011_Test -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

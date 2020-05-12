@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="com.training.sanity.tests.UFM_012_Test">
+        <methods>
+          <include name="UFM_012_CatagoriesList"/>
+          <include name="setUpBeforeClass"/>
+          <include name="UFM_012_deleteCategory"/>
+          <include name="tearDown"/>
+          <include name="UFM_012_Login"/>
+          <include name="UFM_012_CatalogMenu"/>
+        </methods>
+      </class> <!-- com.training.sanity.tests.UFM_012_Test -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
