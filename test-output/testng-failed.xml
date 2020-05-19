@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Sample test Suite]">
+  <test thread-count="5" name="Sample test(failed)">
     <classes>
-      <class name="com.training.sanity.tests.UFM_012_Test">
+      <class name="com.training.sanity.tests.UFM_046_Test">
         <methods>
-          <include name="UFM_012_CatagoriesList"/>
-          <include name="setUpBeforeClass"/>
-          <include name="UFM_012_deleteCategory"/>
+          <include name="UFM_046_AdminLogin"/>
+          <include name="UFM_046_searchOrder"/>
+          <include name="AfterTestMethod"/>
+          <include name="UFM_046_AdminViewOrders"/>
           <include name="tearDown"/>
-          <include name="UFM_012_Login"/>
-          <include name="UFM_012_CatalogMenu"/>
+          <include name="BeforeTestMethod"/>
+          <include name="setUpBeforeClass"/>
+          <include name="UFM_046_editOrder"/>
         </methods>
-      </class> <!-- com.training.sanity.tests.UFM_012_Test -->
+      </class> <!-- com.training.sanity.tests.UFM_046_Test -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Sample test(failed) -->
+</suite> <!-- Failed suite [Sample test Suite] -->

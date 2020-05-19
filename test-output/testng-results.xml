@@ -1,33 +1,317 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" ignored="0" total="11" passed="11">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="24168" started-at="2020-05-10T15:21:01Z" finished-at="2020-05-10T15:21:26Z">
+  <suite name="Sample test Suite" duration-ms="153724" started-at="2020-05-19T14:45:47Z" finished-at="2020-05-19T14:48:21Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="24168" started-at="2020-05-10T15:21:01Z" finished-at="2020-05-10T15:21:26Z">
-      <class name="com.training.sanity.tests.UFM_011_Test">
-        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.UFM_011_Test@b6a1c6cc]" name="setUpBeforeClass" is-config="true" duration-ms="15344" started-at="2020-05-10T15:21:01Z" finished-at="2020-05-10T15:21:17Z">
+    <test name="Sample test" duration-ms="153724" started-at="2020-05-19T14:45:47Z" finished-at="2020-05-19T14:48:21Z">
+      <class name="com.training.sanity.tests.UFM_042_Test">
+        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.UFM_042_Test@8070d5d5]" name="setUpBeforeClass" is-config="true" duration-ms="15352" started-at="2020-05-19T14:45:47Z" finished-at="2020-05-19T14:46:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method status="PASS" signature="UFM_011_Login()[pri:0, instance:com.training.sanity.tests.UFM_011_Test@b6a1c6cc]" name="UFM_011_Login" duration-ms="2988" started-at="2020-05-10T15:21:17Z" finished-at="2020-05-10T15:21:20Z">
+        <test-method status="PASS" signature="BeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.training.sanity.tests.UFM_042_Test@8070d5d5]" name="BeforeTestMethod" is-config="true" duration-ms="3" started-at="2020-05-19T14:46:03Z" finished-at="2020-05-19T14:46:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.training.sanity.tests.UFM_042_Test.UFM_042_Login()]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- UFM_011_Login -->
-        <test-method status="PASS" signature="UFM_011_CatalogMenu()[pri:0, instance:com.training.sanity.tests.UFM_011_Test@b6a1c6cc]" name="UFM_011_CatalogMenu" duration-ms="2579" started-at="2020-05-10T15:21:20Z" depends-on-methods="com.training.sanity.tests.UFM_011_Test.UFM_011_Login" finished-at="2020-05-10T15:21:22Z">
+        </test-method> <!-- BeforeTestMethod -->
+        <test-method status="PASS" signature="UFM_042_Login()[pri:0, instance:com.training.sanity.tests.UFM_042_Test@8070d5d5]" name="UFM_042_Login" duration-ms="2826" started-at="2020-05-19T14:46:03Z" finished-at="2020-05-19T14:46:06Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- UFM_011_CatalogMenu -->
-        <test-method status="PASS" signature="UFM_011_CategoriesList()[pri:0, instance:com.training.sanity.tests.UFM_011_Test@b6a1c6cc]" name="UFM_011_CategoriesList" duration-ms="991" started-at="2020-05-10T15:21:22Z" depends-on-methods="com.training.sanity.tests.UFM_011_Test.UFM_011_CatalogMenu" finished-at="2020-05-10T15:21:23Z">
+        </test-method> <!-- UFM_042_Login -->
+        <test-method status="PASS" signature="AfterTestMethod(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.UFM_042_Test@8070d5d5]" name="AfterTestMethod" is-config="true" duration-ms="1" started-at="2020-05-19T14:46:06Z" finished-at="2020-05-19T14:46:06Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=UFM_042_Login status=SUCCESS method=UFM_042_Test.UFM_042_Login()[pri:0, instance:com.training.sanity.tests.UFM_042_Test@8070d5d5] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- UFM_011_CategoriesList -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.UFM_011_Test@b6a1c6cc]" name="tearDown" is-config="true" duration-ms="2205" started-at="2020-05-10T15:21:23Z" finished-at="2020-05-10T15:21:26Z">
+        </test-method> <!-- AfterTestMethod -->
+        <test-method status="PASS" signature="BeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.training.sanity.tests.UFM_042_Test@8070d5d5]" name="BeforeTestMethod" is-config="true" duration-ms="1" started-at="2020-05-19T14:46:06Z" finished-at="2020-05-19T14:46:06Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.training.sanity.tests.UFM_042_Test.UFM_042_CatalogMenu()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeTestMethod -->
+        <test-method status="PASS" signature="UFM_042_CatalogMenu()[pri:0, instance:com.training.sanity.tests.UFM_042_Test@8070d5d5]" name="UFM_042_CatalogMenu" duration-ms="2468" started-at="2020-05-19T14:46:06Z" depends-on-methods="com.training.sanity.tests.UFM_042_Test.UFM_042_Login" finished-at="2020-05-19T14:46:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UFM_042_CatalogMenu -->
+        <test-method status="PASS" signature="AfterTestMethod(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.UFM_042_Test@8070d5d5]" name="AfterTestMethod" is-config="true" duration-ms="2" started-at="2020-05-19T14:46:08Z" finished-at="2020-05-19T14:46:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=UFM_042_CatalogMenu status=SUCCESS method=UFM_042_Test.UFM_042_CatalogMenu()[pri:0, instance:com.training.sanity.tests.UFM_042_Test@8070d5d5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterTestMethod -->
+        <test-method status="PASS" signature="UFM_042_AddProduct()[pri:0, instance:com.training.sanity.tests.UFM_042_Test@8070d5d5]" name="UFM_042_AddProduct" duration-ms="9632" started-at="2020-05-19T14:46:08Z" depends-on-methods="com.training.sanity.tests.UFM_042_Test.UFM_042_CatalogMenu" finished-at="2020-05-19T14:46:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UFM_042_AddProduct -->
+        <test-method status="PASS" signature="BeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.training.sanity.tests.UFM_042_Test@8070d5d5]" name="BeforeTestMethod" is-config="true" duration-ms="0" started-at="2020-05-19T14:46:08Z" finished-at="2020-05-19T14:46:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.training.sanity.tests.UFM_042_Test.UFM_042_AddProduct()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeTestMethod -->
+        <test-method status="PASS" signature="AfterTestMethod(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.UFM_042_Test@8070d5d5]" name="AfterTestMethod" is-config="true" duration-ms="4" started-at="2020-05-19T14:46:18Z" finished-at="2020-05-19T14:46:18Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=UFM_042_AddProduct status=SUCCESS method=UFM_042_Test.UFM_042_AddProduct()[pri:0, instance:com.training.sanity.tests.UFM_042_Test@8070d5d5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterTestMethod -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.UFM_042_Test@8070d5d5]" name="tearDown" is-config="true" duration-ms="1970" started-at="2020-05-19T14:46:18Z" finished-at="2020-05-19T14:46:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.training.sanity.tests.UFM_011_Test -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- com.training.sanity.tests.UFM_042_Test -->
+      <class name="com.training.sanity.tests.UFM_046_Test">
+        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.UFM_046_Test@921805ec]" name="setUpBeforeClass" is-config="true" duration-ms="10280" started-at="2020-05-19T14:46:20Z" finished-at="2020-05-19T14:46:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpBeforeClass -->
+        <test-method status="PASS" signature="BeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.training.sanity.tests.UFM_046_Test@921805ec]" name="BeforeTestMethod" is-config="true" duration-ms="0" started-at="2020-05-19T14:46:30Z" finished-at="2020-05-19T14:46:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.training.sanity.tests.UFM_046_Test.UFM_046_UserLogin()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeTestMethod -->
+        <test-method status="PASS" signature="UFM_046_UserLogin()[pri:0, instance:com.training.sanity.tests.UFM_046_Test@921805ec]" name="UFM_046_UserLogin" duration-ms="12557" started-at="2020-05-19T14:46:30Z" finished-at="2020-05-19T14:46:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UFM_046_UserLogin -->
+        <test-method status="PASS" signature="AfterTestMethod(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.UFM_046_Test@921805ec]" name="AfterTestMethod" is-config="true" duration-ms="2" started-at="2020-05-19T14:46:43Z" finished-at="2020-05-19T14:46:43Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=UFM_046_UserLogin status=SUCCESS method=UFM_046_Test.UFM_046_UserLogin()[pri:0, instance:com.training.sanity.tests.UFM_046_Test@921805ec] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterTestMethod -->
+        <test-method status="PASS" signature="BeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.training.sanity.tests.UFM_046_Test@921805ec]" name="BeforeTestMethod" is-config="true" duration-ms="0" started-at="2020-05-19T14:46:43Z" finished-at="2020-05-19T14:46:43Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.training.sanity.tests.UFM_046_Test.UFM_046_UserAddProducttoCart()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeTestMethod -->
+        <test-method status="PASS" signature="UFM_046_UserAddProducttoCart()[pri:0, instance:com.training.sanity.tests.UFM_046_Test@921805ec]" name="UFM_046_UserAddProducttoCart" duration-ms="9178" started-at="2020-05-19T14:46:43Z" depends-on-methods="com.training.sanity.tests.UFM_046_Test.UFM_046_UserLogin" finished-at="2020-05-19T14:46:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UFM_046_UserAddProducttoCart -->
+        <test-method status="PASS" signature="AfterTestMethod(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.UFM_046_Test@921805ec]" name="AfterTestMethod" is-config="true" duration-ms="1" started-at="2020-05-19T14:46:52Z" finished-at="2020-05-19T14:46:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=UFM_046_UserAddProducttoCart status=SUCCESS method=UFM_046_Test.UFM_046_UserAddProducttoCart()[pri:0, instance:com.training.sanity.tests.UFM_046_Test@921805ec] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterTestMethod -->
+        <test-method status="PASS" signature="BeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.training.sanity.tests.UFM_046_Test@921805ec]" name="BeforeTestMethod" is-config="true" duration-ms="1" started-at="2020-05-19T14:46:52Z" finished-at="2020-05-19T14:46:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.training.sanity.tests.UFM_046_Test.UFM_046_UserPurchaseProduct()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeTestMethod -->
+        <test-method status="PASS" signature="UFM_046_UserPurchaseProduct()[pri:0, instance:com.training.sanity.tests.UFM_046_Test@921805ec]" name="UFM_046_UserPurchaseProduct" duration-ms="10476" started-at="2020-05-19T14:46:52Z" depends-on-methods="com.training.sanity.tests.UFM_046_Test.UFM_046_UserAddProducttoCart" finished-at="2020-05-19T14:47:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UFM_046_UserPurchaseProduct -->
+        <test-method status="PASS" signature="AfterTestMethod(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.UFM_046_Test@921805ec]" name="AfterTestMethod" is-config="true" duration-ms="1" started-at="2020-05-19T14:47:02Z" finished-at="2020-05-19T14:47:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=UFM_046_UserPurchaseProduct status=SUCCESS method=UFM_046_Test.UFM_046_UserPurchaseProduct()[pri:0, instance:com.training.sanity.tests.UFM_046_Test@921805ec] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterTestMethod -->
+        <test-method status="PASS" signature="BeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.training.sanity.tests.UFM_046_Test@921805ec]" name="BeforeTestMethod" is-config="true" duration-ms="0" started-at="2020-05-19T14:47:02Z" finished-at="2020-05-19T14:47:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.training.sanity.tests.UFM_046_Test.UFM_046_UserLogout()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeTestMethod -->
+        <test-method status="PASS" signature="UFM_046_UserLogout()[pri:0, instance:com.training.sanity.tests.UFM_046_Test@921805ec]" name="UFM_046_UserLogout" duration-ms="3171" started-at="2020-05-19T14:47:02Z" depends-on-methods="com.training.sanity.tests.UFM_046_Test.UFM_046_UserPurchaseProduct" finished-at="2020-05-19T14:47:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UFM_046_UserLogout -->
+        <test-method status="PASS" signature="AfterTestMethod(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.UFM_046_Test@921805ec]" name="AfterTestMethod" is-config="true" duration-ms="0" started-at="2020-05-19T14:47:05Z" finished-at="2020-05-19T14:47:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=UFM_046_UserLogout status=SUCCESS method=UFM_046_Test.UFM_046_UserLogout()[pri:0, instance:com.training.sanity.tests.UFM_046_Test@921805ec] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterTestMethod -->
+        <test-method status="PASS" signature="UFM_046_AdminLogin()[pri:0, instance:com.training.sanity.tests.UFM_046_Test@921805ec]" name="UFM_046_AdminLogin" duration-ms="7077" started-at="2020-05-19T14:47:05Z" depends-on-methods="com.training.sanity.tests.UFM_046_Test.UFM_046_UserLogout" finished-at="2020-05-19T14:47:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UFM_046_AdminLogin -->
+        <test-method status="PASS" signature="BeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.training.sanity.tests.UFM_046_Test@921805ec]" name="BeforeTestMethod" is-config="true" duration-ms="0" started-at="2020-05-19T14:47:05Z" finished-at="2020-05-19T14:47:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.training.sanity.tests.UFM_046_Test.UFM_046_AdminLogin()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeTestMethod -->
+        <test-method status="PASS" signature="UFM_046_AdminViewOrders()[pri:0, instance:com.training.sanity.tests.UFM_046_Test@921805ec]" name="UFM_046_AdminViewOrders" duration-ms="2949" started-at="2020-05-19T14:47:13Z" depends-on-methods="com.training.sanity.tests.UFM_046_Test.UFM_046_AdminLogin" finished-at="2020-05-19T14:47:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UFM_046_AdminViewOrders -->
+        <test-method status="PASS" signature="AfterTestMethod(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.UFM_046_Test@921805ec]" name="AfterTestMethod" is-config="true" duration-ms="0" started-at="2020-05-19T14:47:13Z" finished-at="2020-05-19T14:47:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=UFM_046_AdminLogin status=SUCCESS method=UFM_046_Test.UFM_046_AdminLogin()[pri:0, instance:com.training.sanity.tests.UFM_046_Test@921805ec] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterTestMethod -->
+        <test-method status="PASS" signature="BeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.training.sanity.tests.UFM_046_Test@921805ec]" name="BeforeTestMethod" is-config="true" duration-ms="0" started-at="2020-05-19T14:47:13Z" finished-at="2020-05-19T14:47:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.training.sanity.tests.UFM_046_Test.UFM_046_AdminViewOrders()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeTestMethod -->
+        <test-method status="PASS" signature="AfterTestMethod(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.UFM_046_Test@921805ec]" name="AfterTestMethod" is-config="true" duration-ms="0" started-at="2020-05-19T14:47:15Z" finished-at="2020-05-19T14:47:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=UFM_046_AdminViewOrders status=SUCCESS method=UFM_046_Test.UFM_046_AdminViewOrders()[pri:0, instance:com.training.sanity.tests.UFM_046_Test@921805ec] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterTestMethod -->
+        <test-method status="PASS" signature="BeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.training.sanity.tests.UFM_046_Test@921805ec]" name="BeforeTestMethod" is-config="true" duration-ms="0" started-at="2020-05-19T14:47:15Z" finished-at="2020-05-19T14:47:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.training.sanity.tests.UFM_046_Test.UFM_046_searchOrder()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeTestMethod -->
+        <test-method status="PASS" signature="UFM_046_searchOrder()[pri:0, instance:com.training.sanity.tests.UFM_046_Test@921805ec]" name="UFM_046_searchOrder" duration-ms="464" started-at="2020-05-19T14:47:15Z" depends-on-methods="com.training.sanity.tests.UFM_046_Test.UFM_046_AdminViewOrders" finished-at="2020-05-19T14:47:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UFM_046_searchOrder -->
+        <test-method status="PASS" signature="BeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.training.sanity.tests.UFM_046_Test@921805ec]" name="BeforeTestMethod" is-config="true" duration-ms="0" started-at="2020-05-19T14:47:16Z" finished-at="2020-05-19T14:47:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.training.sanity.tests.UFM_046_Test.UFM_046_editOrder()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeTestMethod -->
+        <test-method status="PASS" signature="UFM_046_editOrder()[pri:0, instance:com.training.sanity.tests.UFM_046_Test@921805ec]" name="UFM_046_editOrder" duration-ms="63256" started-at="2020-05-19T14:47:16Z" depends-on-methods="com.training.sanity.tests.UFM_046_Test.UFM_046_searchOrder" finished-at="2020-05-19T14:48:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UFM_046_editOrder -->
+        <test-method status="PASS" signature="AfterTestMethod(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.UFM_046_Test@921805ec]" name="AfterTestMethod" is-config="true" duration-ms="0" started-at="2020-05-19T14:47:16Z" finished-at="2020-05-19T14:47:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=UFM_046_searchOrder status=SUCCESS method=UFM_046_Test.UFM_046_searchOrder()[pri:0, instance:com.training.sanity.tests.UFM_046_Test@921805ec] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterTestMethod -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.UFM_046_Test@921805ec]" name="tearDown" is-config="true" duration-ms="1935" started-at="2020-05-19T14:48:19Z" finished-at="2020-05-19T14:48:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="AfterTestMethod(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.UFM_046_Test@921805ec]" name="AfterTestMethod" is-config="true" duration-ms="0" started-at="2020-05-19T14:48:19Z" finished-at="2020-05-19T14:48:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=UFM_046_editOrder status=SUCCESS method=UFM_046_Test.UFM_046_editOrder()[pri:0, instance:com.training.sanity.tests.UFM_046_Test@921805ec] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterTestMethod -->
+      </class> <!-- com.training.sanity.tests.UFM_046_Test -->
+    </test> <!-- Sample test -->
+  </suite> <!-- Sample test Suite -->
 </testng-results>

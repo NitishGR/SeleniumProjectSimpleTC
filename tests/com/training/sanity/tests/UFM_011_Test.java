@@ -7,28 +7,31 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.training.generics.ScreenShot;
-import com.training.pom.CategoriesPOM;
-import com.training.pom.DashboardPOM;
-import com.training.pom.LoginUniformAdminPOM;
+import com.training.pom.AdminCategoriesPOM;
+import com.training.pom.AdminDashboardPOM;
+import com.training.pom.AdminLoginUniformPOM;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
 
 public class UFM_011_Test {
 	private WebDriver driver;
+	private WebDriverWait wait;
 	private String baseUrl;
 	// private LoginPOM loginPOM;
 	private static Properties properties;
 	private ScreenShot screenShot;
+	
 
-	private LoginUniformAdminPOM loginPOM;
-	private DashboardPOM dashboardPOM;
-	private CategoriesPOM categoriesPOM;
+	private AdminLoginUniformPOM loginPOM;
+	private AdminDashboardPOM dashboardPOM;
+	private AdminCategoriesPOM categoriesPOM;
 
 	@BeforeClass
 	public void setUpBeforeClass() throws IOException {
@@ -40,11 +43,12 @@ public class UFM_011_Test {
 		// loginPOM = new LoginPOM(driver);
 		driver.manage().timeouts().implicitlyWait(Integer.parseInt(properties.getProperty("implicitWait")),
 				TimeUnit.SECONDS);
+		wait = new WebDriverWait(driver, Integer.parseInt(properties.getProperty("explicitWait")));
 
 		// Load POM
-		loginPOM = new LoginUniformAdminPOM(driver);
-		dashboardPOM = new DashboardPOM(driver);
-		categoriesPOM = new CategoriesPOM(driver);
+		loginPOM = new AdminLoginUniformPOM(driver);
+		dashboardPOM = new AdminDashboardPOM(driver, wait);
+		categoriesPOM = new AdminCategoriesPOM(driver);
 
 		baseUrl = properties.getProperty("baseURL");
 		screenShot = new ScreenShot(driver);

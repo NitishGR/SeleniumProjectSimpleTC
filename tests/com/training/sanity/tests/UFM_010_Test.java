@@ -12,7 +12,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.training.generics.ScreenShot;
-import com.training.pom.LoginUniformAdminPOM;
+import com.training.pom.AdminLoginUniformPOM;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
 
@@ -23,7 +23,7 @@ public class UFM_010_Test {
 	private static Properties properties;
 	private ScreenShot screenShot;
 
-	private LoginUniformAdminPOM loginPOM;
+	private AdminLoginUniformPOM loginPOM;
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws IOException {
@@ -36,7 +36,7 @@ public class UFM_010_Test {
 	public void setUp() throws Exception {
 		driver = DriverFactory.getDriver(DriverNames.CHROME);
 		// loginPOM = new LoginPOM(driver);
-		loginPOM = new LoginUniformAdminPOM(driver);
+		loginPOM = new AdminLoginUniformPOM(driver);
 		baseUrl = properties.getProperty("baseURL");
 		screenShot = new ScreenShot(driver);
 		// open the browser
