@@ -39,6 +39,15 @@ public class UserCheckoutPOM {
 	@FindBy(id = "button-confirm")
 	private WebElement confirmOrder;
 
+	@FindBy(id = "input-email")
+	private WebElement userName;
+
+	@FindBy(id = "input-password")
+	private WebElement password;
+
+	@FindBy(id = "button-login")
+	private WebElement loginBtn;
+	
 	public String getActiveSectioninCheckout() {
 		return activeSection.getText().trim();
 	}
@@ -75,4 +84,18 @@ public class UserCheckoutPOM {
 		confirmOrder.click();
 	}
 
+	public void sendUserName(String userName) {
+		wait.until(ExpectedConditions.visibilityOf(this.userName));
+		this.userName.clear();
+		this.userName.sendKeys(userName);
+	}
+
+	public void sendPassword(String password) {
+		this.password.clear();
+		this.password.sendKeys(password);
+	}
+	
+	public void clickLoginBtn() {
+		this.loginBtn.click();
+	}
 }

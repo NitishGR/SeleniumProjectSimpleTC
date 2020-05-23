@@ -24,6 +24,7 @@ import com.training.pom.AdminLoginUniformPOM;
 import com.training.pom.AdmimProductnPOM;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
+import com.trianing.waits.WaitTypes;
 
 public class UFM_042_Test {
 	private WebDriver driver;
@@ -33,6 +34,7 @@ public class UFM_042_Test {
 	// private LoginPOM loginPOM;
 	private static Properties properties;
 	private ScreenShot screenShot;
+	private WaitTypes waitT;
 
 	private AdminLoginUniformPOM loginPOM;
 	private AdminDashboardPOM dashboardPOM;
@@ -53,12 +55,13 @@ public class UFM_042_Test {
 
 		// Load POM
 		loginPOM = new AdminLoginUniformPOM(driver);
-		dashboardPOM = new AdminDashboardPOM(driver, null);
+		dashboardPOM = new AdminDashboardPOM(driver, wait);
 		categoriesPOM = new AdminCategoriesPOM(driver);
 		productsPOM = new AdmimProductnPOM(driver, wait);
 
 		baseUrl = properties.getProperty("baseURL");
 		screenShot = new ScreenShot(driver);
+		waitT = new WaitTypes(driver);
 
 		// open the browser
 		driver.get(baseUrl);

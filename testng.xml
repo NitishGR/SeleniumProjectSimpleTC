@@ -10,6 +10,9 @@
 			<class name="com.training.sanity.tests.UFM_041_Test" />
 			<class name="com.training.sanity.tests.UFM_042_Test" />
 			<class name="com.training.sanity.tests.UFM_046_Test" />
+			<class name="com.training.sanity.tests.UFM_070_Test" />
+			<class name="com.training.sanity.tests.UFM_071_Test" />
+			<class name="com.training.sanity.tests.UFM_072_Test" />
 		</classes>
 	</test>
 </suite>	

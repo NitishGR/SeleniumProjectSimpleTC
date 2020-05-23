@@ -32,9 +32,11 @@ public class UserLoginUniformPOM {
 
 	@FindBy(xpath = "//ul//li/a[text()='Login']")
 	private WebElement myAccountLogin;
-	
+
 	@FindBy(xpath = "//ul//li/a[text()='Logout']")
 	private WebElement myAccountLogout;
+
+	
 
 	public void sendUserName(String userName) {
 		wait.until(ExpectedConditions.visibilityOf(this.userName));
@@ -60,9 +62,11 @@ public class UserLoginUniformPOM {
 		wait.until(ExpectedConditions.elementToBeClickable(myAccountLogin));
 		myAccountLogin.click();
 	}
-	
+
 	public void clickoMyAccountLogout() {
 		wait.until(ExpectedConditions.elementToBeClickable(myAccountLogout));
 		myAccountLogout.click();
 	}
+
+	
 }

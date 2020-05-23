@@ -24,6 +24,7 @@ import com.training.pom.AdminLoginUniformPOM;
 import com.training.pom.AdmimProductnPOM;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
+import com.trianing.waits.WaitTypes;
 
 public class UFM_041_Test {
 	private WebDriver driver;
@@ -33,6 +34,7 @@ public class UFM_041_Test {
 	// private LoginPOM loginPOM;
 	private static Properties properties;
 	private ScreenShot screenShot;
+	private WaitTypes waitT;
 
 	private AdminLoginUniformPOM loginPOM;
 	private AdminDashboardPOM dashboardPOM;
@@ -53,12 +55,13 @@ public class UFM_041_Test {
 
 		// Load POM
 		loginPOM = new AdminLoginUniformPOM(driver);
-		dashboardPOM = new AdminDashboardPOM(driver, null);
+		dashboardPOM = new AdminDashboardPOM(driver, wait);
 		categoriesPOM = new AdminCategoriesPOM(driver);
 		productsPOM = new AdmimProductnPOM(driver, wait);
 
 		baseUrl = properties.getProperty("baseURL");
 		screenShot = new ScreenShot(driver);
+		waitT = new WaitTypes(driver);
 
 		// open the browser
 		driver.get(baseUrl);
@@ -93,6 +96,7 @@ public class UFM_041_Test {
 		loginPOM.sendUserName(properties.getProperty("uniform.adminuser"));
 		loginPOM.sendPassword(properties.getProperty("uniform.adminpwd"));
 		loginPOM.clickLoginBtn();
+		waitT.waitForPageToBeReady();
 		screenShot.captureScreenShot("UFM_041_Login");
 		String sCurrentURL = driver.getCurrentUrl();
 		Assert.assertEquals(sCurrentURL.contains("dashboard"), true);
@@ -127,6 +131,7 @@ public class UFM_041_Test {
 
 		// Click on Products
 		dashboardPOM.clickonProducts();
+		waitT.waitForPageToBeReady();
 	}
 
 	@Test(dependsOnMethods = "UFM_041_CatalogMenu")
@@ -146,6 +151,8 @@ public class UFM_041_Test {
 		productsPOM.enterProductName(sProductName);
 		// Click on Filter
 		productsPOM.clickonFilterButton();
+		waitT.waitForPageToBeReady();
+
 		int ipage = 1;
 		// Verify results of product by Product Name
 		boolean isRecordPresent = productsPOM.recordExists();
@@ -165,6 +172,8 @@ public class UFM_041_Test {
 		productsPOM.enterProductPrice(sProductPrice);
 		// Click on Filter
 		productsPOM.clickonFilterButton();
+		waitT.waitForPageToBeReady();
+
 		ipage = 1;
 		// Verify results of product by Product Name
 		isRecordPresent = productsPOM.recordExists();
@@ -184,6 +193,8 @@ public class UFM_041_Test {
 		productsPOM.enterProductModel(sProductModel);
 		// Click on Filter
 		productsPOM.clickonFilterButton();
+		waitT.waitForPageToBeReady();
+
 		ipage = 1;
 		// Verify results of product by Product Model
 		isRecordPresent = productsPOM.recordExists();
@@ -203,6 +214,8 @@ public class UFM_041_Test {
 		productsPOM.selectProductStatus(sProductStatus);
 		// Click on Filter
 		productsPOM.clickonFilterButton();
+		waitT.waitForPageToBeReady();
+
 		ipage = 1;
 		// Verify results of product by Product Status
 		isRecordPresent = productsPOM.recordExists();
@@ -222,6 +235,8 @@ public class UFM_041_Test {
 		productsPOM.enterProductQuantity(sProductQuantity);
 		// Click on Filter
 		productsPOM.clickonFilterButton();
+		waitT.waitForPageToBeReady();
+
 		ipage = 1;
 		// Verify results of product by Product Quantity
 		isRecordPresent = productsPOM.recordExists();

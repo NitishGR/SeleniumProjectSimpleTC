@@ -31,7 +31,13 @@ public class UserUniformHomePOM {
 
 	@FindBy(xpath = "//a[@title='My Account']//span[contains(@class,'hidden')]")
 	WebElement wUserName;
+	
+	@FindBy(xpath = "//a[@class='dropdown-toggle'][@title='My Account']")
+	private WebElement myAccount;
 
+	@FindBy(xpath = "//a[@class='dropdown-toggle'][@title='My Account']//following-sibling::ul//li/a[text()='Order History']")
+	private WebElement myAccountOrderHistory;
+	
 	public void viewProduct(String sProductName) {
 		wProduct = driver.findElement(By.xpath("//div[@id='featured-grid']//a/img[@title='" + sProductName + "']"));
 		js.executeScript("arguments[0].scrollIntoView(true);", wProduct);
@@ -48,12 +54,21 @@ public class UserUniformHomePOM {
 	}
 
 	public void clickonCheckout() {
-		wait.until(ExpectedConditions.elementToBeClickable(checkout));
 		checkout.click();
 	}
 
 	public String getUserName() {
 		// TODO Auto-generated method stub
 		return wUserName.getText().trim();
+	}
+	
+	public void clickonMyAccount() {
+		wait.until(ExpectedConditions.elementToBeClickable(myAccount));
+		myAccount.click();
+	}
+	
+	public void clickoMyAccountOrderHistory() {
+		wait.until(ExpectedConditions.elementToBeClickable(myAccountOrderHistory));
+		myAccountOrderHistory.click();
 	}
 }

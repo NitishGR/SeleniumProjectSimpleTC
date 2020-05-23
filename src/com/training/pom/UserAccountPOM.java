@@ -20,9 +20,17 @@ public class UserAccountPOM {
 
 	@FindBy(xpath = "//a[text()='Uniform Store']")
 	private WebElement uniformStore;
-
+	
+	@FindBy(xpath = "//div[@id='content']//a[contains(text(),'View your order history')]")
+	private WebElement userOrderHistory ; 
+	
 	public void clickoUniformStore() {
 		wait.until(ExpectedConditions.elementToBeClickable(uniformStore));
 		uniformStore.click();
+	}
+	
+	public void clickonViewOrderHistory() {
+		wait.until(ExpectedConditions.elementToBeClickable(userOrderHistory));
+		userOrderHistory.click();
 	}
 }

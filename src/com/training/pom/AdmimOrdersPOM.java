@@ -49,6 +49,9 @@ public class AdmimOrdersPOM {
 	@FindBy(id = "input-product")
 	private WebElement adminInputProductName;
 
+	@FindBy(xpath = "//input[@id='input-product']/following-sibling::ul/li/a")
+	private List<WebElement> selectInputProductName;
+
 	@FindBy(id = "input-quantity")
 	private WebElement adminInputProductQuantity;
 
@@ -69,8 +72,13 @@ public class AdmimOrdersPOM {
 
 	@FindBy(id = "tab-cart")
 	private WebElement productTableView;
-	
-	
+
+	@FindBy(id = "input-order-status")
+	private WebElement productOrderStatus;
+
+	@FindBy(id = "button-history")
+	private WebElement addProductHistory;
+
 	public boolean verifyOrderExists(String sUserName, String sDate) {
 		boolean isRecordExists = false;
 		// List<WebElement> cellUserName =
@@ -107,6 +115,15 @@ public class AdmimOrdersPOM {
 		}
 	}
 
+	public void clickonViewOrder(String sUserName, String sDate) {
+		List<WebElement> editButton = driver
+				.findElements(By.xpath("//tbody//td[text()='" + sUserName + "']/following-sibling::td[3][text()='"
+						+ sDate + "']//following-sibling::td[2]/a[@data-original-title='View']"));
+		if (editButton.size() != 0) {
+			editButton.get(0).click();
+		}
+	}
+
 	public String getActiveTab() {
 		js.executeScript("arguments[0].scrollIntoView();", activeTab);
 		return activeTab.getText().trim();
@@ -137,19 +154,22 @@ public class AdmimOrdersPOM {
 				+ sProductName + "')]//following-sibling::td/button[@data-original-title='Remove']"));
 		int i = 0;
 		int iOrderCount = orderList.size();
+
 		while (i < iOrderCount) {
+			orderList = driver.findElements(By.xpath("//tbody[@id='cart']//tr//td[contains(text(),'" + sProductName
+					+ "')]//following-sibling::td/button[@data-original-title='Remove']"));
 			WebElement wOrder = orderList.get(0);
 			wOrder.click();
 			wait.until(ExpectedConditions.invisibilityOf(wOrder));
-			orderList = driver.findElements(By.xpath("//tbody[@id='cart']//tr//td[contains(text(),'" + sProductName
-					+ "')]//following-sibling::td/button[@data-original-title='Remove']"));
 			i++;
 		}
 	}
 
 	public boolean verifyOrderPlacedIsRemoved(String sProductName) {
-		List<WebElement> order = driver.findElements(By.xpath("//tbody[@id='cart']//tr//td[contains(text(),'"
-				+ sProductName + "')]//following-sibling::td/button[@data-original-title='Remove']"));
+//		List<WebElement> order = driver.findElements(By.xpath("//tbody[@id='cart']//tr//td[contains(text(),'"
+//				+ sProductName + "')]//following-sibling::td/button[@data-original-title='Remove']"));
+		List<WebElement> order = driver
+				.findElements(By.xpath("//tbody[@id='cart']//tr//td[contains(text(),'" + sProductName + "')]"));
 		if (order.size() == 0) {
 			return true;
 		}
@@ -159,7 +179,9 @@ public class AdmimOrdersPOM {
 	public void adminEnterProductName(String sAdminProductName) {
 		adminInputProductName.clear();
 		adminInputProductName.sendKeys(sAdminProductName);
-		adminInputProductName.findElement(By.xpath("following-sibling::ul/li/a")).click();
+		if (selectInputProductName.size() != 0) {
+			selectInputProductName.get(0).click();
+		}
 	}
 
 	public void adminEnterProductQuantity(String sAdminProductQuantity) {
@@ -188,11 +210,11 @@ public class AdmimOrdersPOM {
 		int i = 0;
 		int iOutofStockOrderCount = removeOutofStockOrderList.size();
 		while (i < iOutofStockOrderCount) {
+			removeOutofStockOrderList = driver.findElements(By.xpath(
+					"//tbody[@id='cart']//tr//td//span[@class='text-danger'][text()='***']//parent::td//following-sibling::td/button"));
 			WebElement wremoveOutofStockOrder = removeOutofStockOrderList.get(0);
 			wremoveOutofStockOrder.click();
 			wait.until(ExpectedConditions.invisibilityOf(wremoveOutofStockOrder));
-			removeOutofStockOrderList = driver.findElements(By.xpath(
-					"//tbody[@id='cart']//tr//td//span[@class='text-danger'][text()='***']//parent::td//following-sibling::td/button"));
 			i++;
 		}
 	}
@@ -212,8 +234,38 @@ public class AdmimOrdersPOM {
 		options.selectByValue("free.free");
 		applyShippingMethod.click();
 	}
-	
+
 	public void viewProductTable() {
 		js.executeScript("arguments[0].scrollIntoView();", productTableView);
+	}
+
+	public boolean selectProductStatus(String sOption) {
+		boolean isPresent = false;
+		Select options = new Select(productOrderStatus);
+		List<WebElement> optList = options.getOptions();
+
+		for (WebElement opt : optList) {
+			if (opt.getText().equals(sOption)) {
+				isPresent = true;
+				options.selectByVisibleText(sOption);
+			}
+		}
+		return isPresent;
+	}
+
+	public void clickonAddProductHistory() {
+		wait.until(ExpectedConditions.elementToBeClickable(addProductHistory));
+		addProductHistory.click();
+	}
+
+	public String getOrderId(String sUserName, String sdate) {
+		// TODO Auto-generated method stub
+		String sOrderID = "";
+		List<WebElement> listOrderID = driver.findElements(By.xpath("//td[6][text()='" + sdate
+				+ "']/preceding-sibling::td[text()='" + sUserName + "']/preceding-sibling::td[1]"));
+		if (listOrderID.size() != 0) {
+			sOrderID = listOrderID.get(0).getText();
+		}
+		return sOrderID;
 	}
 }

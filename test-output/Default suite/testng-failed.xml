@@ -3,22 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.training.sanity.tests.UFM_046_Test">
+      <class name="com.training.sanity.tests.UFM_072_Test">
         <methods>
-          <include name="UFM_046_AdminLogin"/>
-          <include name="UFM_046_searchOrder"/>
-          <include name="AfterTestMethod"/>
-          <include name="UFM_046_AdminViewOrders"/>
-          <include name="tearDown"/>
           <include name="BeforeTestMethod"/>
-          <include name="UFM_046_UserLogin"/>
-          <include name="UFM_046_UserAddProducttoCart"/>
+          <include name="tearDown"/>
           <include name="setUpBeforeClass"/>
-          <include name="UFM_046_UserPurchaseProduct"/>
-          <include name="UFM_046_UserLogout"/>
-          <include name="UFM_046_editOrder"/>
+          <include name="UFM_072_adminEditProduct" invocation-numbers="1 3"/>
+          <include name="AfterTestMethod"/>
         </methods>
-      </class> <!-- com.training.sanity.tests.UFM_046_Test -->
+      </class> <!-- com.training.sanity.tests.UFM_072_Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
